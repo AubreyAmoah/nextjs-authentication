@@ -19,3 +19,5 @@ const connect = async () => {
     console.log("Something went wrong");
   }
 };
+
+export default connect;

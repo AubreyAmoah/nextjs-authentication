@@ -21,7 +21,7 @@ const LoginPage = () => {
       console.log("Login success", res.data);
       router.push("/profile");
     } catch (error) {
-      console.log("Login failed", error);
+      console.log("Login failed", error.message);
     } finally {
       setLoading(false);
     }

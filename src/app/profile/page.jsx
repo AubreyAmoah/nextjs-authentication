@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 const ProfilePage = () => {
@@ -14,7 +14,7 @@ const ProfilePage = () => {
       toast.success("Logout Succesful");
       router.push("/login");
     } catch (error) {
-      console.log(error.message);
+      //console.log(error.message);
       toast.error(error.message);
     }
   };
@@ -26,6 +26,7 @@ const ProfilePage = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Toaster />
       <h1>Profile</h1>
       <hr />
       <p>Profile page</p>
